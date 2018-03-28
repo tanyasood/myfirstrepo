@@ -1,4 +1,4 @@
-from Spy_details import spy, Spy
+from spy_detail import spy, Spy
 from datetime import datetime
 
 print "Hello!"
