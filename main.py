@@ -1,4 +1,4 @@
-from spy_detail import spy, spy
+from spy_detail import spy, Spy, friends
 from datetime import datetime
 
 print ("Hello!")
@@ -12,7 +12,7 @@ question = "Do you want to continue as " + spy.salutation + " " + spy.name + " (
 
 existing = input(question)
 
-STATUS_MESSAGES=["Tanya", "sood"]
+STATUS_MESSAGES=["Tanya", "Sood"]
 
 # Function to add status
 def add_status():
@@ -24,7 +24,7 @@ def add_status():
     default = input("Do you want to select from the older status (y/n)? ")
     # upper is used to convert the input into upper case
     if default.upper() == "N":
-        new_status_message = input("What status message do you want to set?")
+        new_status_message =input("What status message do you want to set?")
 
         if len(new_status_message) > 0:
             updated_status_message = new_status_message
@@ -38,6 +38,27 @@ def add_status():
         if len(STATUS_MESSAGES) >= message_selection:
             updated_status_message = STATUS_MESSAGES[message_selection - 1]
     return updated_status_message
+
+
+# Function for adding friends
+def add_friend():
+    new_friend = Spy('', '', 0, 0.0)
+    new_friend.name=input("Please add your friend's name")
+    new_friend.salutation = input("Are they Mr. or Ms.?: ")
+
+    new_friend.name = new_friend.salutation + " " + new_friend.name
+
+    new_friend.age = int(input("Age?"))
+
+
+    new_friend.rating = float(input("Spy rating?"))
+    if len(new_friend.name) > 0 and new_friend.age > 12 and new_friend.rating >= spy.rating:
+        friends.append(new_friend)
+        print ("Friend Added!",'red')
+    else:
+        print ("Sorry! Invalid entry. We can\'t add spy with the details you provided")
+
+    return len(friends)
 
 
 # Function to start chat
@@ -73,7 +94,7 @@ if existing == "Y":
     start_chat(spy)
 else:
 
-    spy = spy('','',0,0.0)
+    spy = Spy('','',0,0.0)
 
     spy.name = input("What is your name?")
 
