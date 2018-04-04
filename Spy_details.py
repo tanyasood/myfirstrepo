@@ -11,7 +11,7 @@ class Spy:
         self.chats = []
         self.current_status_message = None
 
-spy = Spy('Ritesh', 'Mr.', 20, 4.5)
+spy = Spy('Tanya', 'Miss.', 22, 3.5)
 
 friend_one = Spy('Deepanshu', 'Mr.', 20, 4.7)
 friend_two = Spy('Tanya', 'Ms.', 20, 4.8)
