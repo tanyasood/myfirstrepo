@@ -1,5 +1,6 @@
 #importing the packages
 from steganography.steganography import Steganography
+from Spy_details import Spy,spy,friends
 from datetime import datetime
 
 print ('Let\'s start the spychat application.')
