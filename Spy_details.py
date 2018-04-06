@@ -11,14 +11,18 @@ class Spy:
         self.chats = []
         self.current_status_message = None
 
-spy = Spy('Tanya', 'Miss.', 22, 3.5)
+#for an existing user
+spy = Spy('Tanya', 'Ms.', 21, 4.6)
 
-friend_one = Spy('Deepanshu', 'Mr.', 20, 4.7)
-friend_two = Spy('Tanya', 'Ms.', 20, 4.8)
-friend_three = Spy('Rahul', 'Mr.', 20, 4.8)
-friend_four = Spy('Ritesh', 'Mr..', 21, 4.9)
-friend_five = Spy('Harshika', 'Ms.', 20, 4.9)
-friend_six = Spy('Yash', 'Mr..', 20, 4.9)
+# chat class
+class ChatMessage:
+    def __init__(self, name, message):
+        self.name = name
+        self.message = message
+        self.time = datetime.now()
 
 
-friends = [friend_one, friend_two, friend_three,friend_four,friend_five,friend_six]
+
+
+
+
