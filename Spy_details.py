@@ -14,12 +14,14 @@ class Spy:
 #for an existing user
 spy = Spy('Tanya', 'Ms.', 21, 4.6)
 
+
 # chat class
 class ChatMessage:
-    def __init__(self, name, message):
+    def __init__(self, name, message, isityou):
         self.name = name
         self.message = message
         self.time = datetime.now()
+        self.isityou = isityou
 
 
 
